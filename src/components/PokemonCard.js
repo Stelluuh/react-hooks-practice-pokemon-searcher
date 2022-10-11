@@ -3,8 +3,8 @@ import { Card } from "semantic-ui-react";
 
 function PokemonCard({pokemon}) {
   // console.log('pokemon card: ', pokemon)
-  const {name, hp, sprites} = pokemon
   const [backImage, setBackImage] = useState(false)
+  const {name, hp, sprites} = pokemon
 
   function clickImage() {
     setBackImage((backImage) => !backImage)
