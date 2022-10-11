@@ -16,14 +16,15 @@ function PokemonPage() {
       .then(data => setPokemons(data))
   }, [])
 
+  function handleAddPokemon (newPokemon) {
+    setPokemons([...pokemons, newPokemon])
+  }
+
+  
   const displayedPokemons = pokemons.filter(pokemon => {
     return pokemon.name.toLowerCase().includes(search.toLowerCase())
   })
 
-  function handleAddPokemon (newPokemon) {
-    const newPokemonArray = [...pokemons, newPokemon]
-    setPokemons(newPokemonArray)
-  }
 
 
   return (
